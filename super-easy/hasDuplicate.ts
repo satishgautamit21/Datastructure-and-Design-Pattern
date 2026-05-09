@@ -18,7 +18,6 @@ function hasDuplicateSol2(arr: number[]){
     return false
 }
 
-
 function hasDuplicateSol3(arr: number[]){
     const obj: Record<number, number> = {};
     for(let num of arr){
