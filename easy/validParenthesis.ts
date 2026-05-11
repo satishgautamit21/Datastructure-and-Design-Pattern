@@ -1,16 +1,19 @@
-function validateParenthesis(str: string): boolean {
-    const obj: Record<string, string> = {
-         '}': '{',
-         ')': '(',
-         ']': '['
-    }
-    const stack: string[] = [];
-    for (let char of str){
-        if(char === '{' || char === '(' || char === '[') stack.push(char);
+function validateParenthesis(str: string) {
+    const obj: Record<string, string> ={
+        '{': '}',
+        '[': ']',
+        '(': ')'
+    };
+    
+    const stack = [];
+    
+    for(let char of str) {
+        if(obj[char]) stack.push(char);
         else {
-            const poppedItem = stack.pop();
-            if(poppedItem !== obj[char]) return false
+            const top: any = stack.pop();
+            if(top && char !== obj[top]) return false
         }
     }
-    return stack.length === 0;
+    
+    return stack.length === 0
 }
