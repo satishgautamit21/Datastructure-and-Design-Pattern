@@ -1,3 +1,15 @@
+/*
+A Valid Palindrome is a string that reads the same forward and backward, 
+after ignoring:
+
+Spaces
+Punctuation
+Special characters
+Case (uppercase/lowercase)
+
+Only letters and digits (alphanumeric characters) are considered.
+*/
+
 function validPalindrome(str: string){
     let start = 0;
     let end = str.length -1;
@@ -14,5 +26,5 @@ function validPalindrome(str: string){
 
 function isAlphanumeric(char: string){
     const testChar = char.toLowerCase();
-    return ((testChar <='a' && testChar >= 'z') || (testChar <='0' && testChar >= '9'))
+    return ((testChar >='a' && testChar <= 'z') || (testChar >='0' && testChar <= '9'))
 }
