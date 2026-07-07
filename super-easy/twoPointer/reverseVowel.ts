@@ -1,3 +1,8 @@
+// Time complexity: O(n) because we are traversing the string once and space complexity is O(n) because we are 
+// creating a new array to store the characters of the string.
+
+// Space complexity is O(n).
+
 function reverseVowelSol1(str: string){
     let strArr = [...str]
     let left = 0;
